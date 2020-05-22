@@ -6,8 +6,6 @@
 
 	<license>MIT</license>
 
-	<dependency id="cordova-plugin-cocoapod-supportx" version="^1.6.1" />
-
 	<engines>
 		<engine name="cordova" version=">=3.2.0" />
 	</engines>
