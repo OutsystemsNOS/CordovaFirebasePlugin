@@ -14,9 +14,11 @@
     <clobbers target="fp" />
   </js-module>
 
+  <dependency id="cordova-plugin-add-swift-support@1.7.2"/>
+
   <hook type="before_plugin_install" src="scripts/configurations/installDependencies.js" />
   <hook type="before_plugin_install" src="scripts/configurations/unzipAndCopyConfigurations.js" />
-  <hook type="after_plugin_install" src="scripts/configurations/iOS_SetDeploymentTarget.js" />
+  <hook type="before_plugin_install" src="scripts/configurations/iOS_SetDeploymentTarget.js" />
 
   <preference name="APP_DOMAIN" default="/" />
   <preference name="APP_PATH" default="/" />
