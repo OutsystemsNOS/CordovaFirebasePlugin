@@ -14,7 +14,7 @@
     <clobbers target="fp" />
   </js-module>
 
-  <dependency id="cordova-plugin-add-swift-support@1.7.2"/>
+
 
   <hook type="before_plugin_install" src="scripts/configurations/installDependencies.js" />
   <hook type="before_plugin_install" src="scripts/configurations/unzipAndCopyConfigurations.js" />
@@ -101,6 +101,8 @@
     <config-file parent="aps-environment" target="*/Entitlements-Release.plist">
       <string>production</string>
     </config-file>
+
+     <dependency id="cordova-plugin-add-swift-support" spec="~1.7.2" />
 
     <resource-file src="GoogleService-Info.plist" target="./GoogleService-Info.plist" />
 
