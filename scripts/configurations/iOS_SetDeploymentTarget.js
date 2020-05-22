@@ -26,11 +26,12 @@ function updateDeploymentTarget(xcodeProject, xcodeProjectPath, targetVersion){
   fs.writeFileSync(xcodeProjectPath, xcodeProject.writeSync(), 'utf-8');
 }
 
-function getProjectName(protoPath) {
-  var cordovaConfigPath = path.join(protoPath, 'config.xml');
-  var content = fs.readFileSync(cordovaConfigPath, 'utf-8');
+function getProjectName(protoPath){
+  var cordovaConfigPath = path.join(protoPath, '.cordova', 'config.json'),
+      content = fs.readFileSync(cordovaConfigPath, 'utf-8'),
+      json = JSON.parse(content);
 
-  return /<name>([\s\S]*)<\/name>/mi.exec(content)[1].trim();
+  return json.name;
 }
 
 /*
