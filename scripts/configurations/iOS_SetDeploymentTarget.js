@@ -41,6 +41,7 @@ function getProjectName(protoPath){
 */
 
 function run(projectRoot){
+  shell.echo(projectRoot);
   var projectName = getProjectName(projectRoot),
       xcodeProjectName = projectName + '.xcodeproj',
       xcodeProjectPath = path.join(projectRoot, 'platforms', 'ios', xcodeProjectName, 'project.pbxproj'),
