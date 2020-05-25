@@ -1,6 +1,6 @@
 var fs = require("fs");
 var path = require("path");
-var utilities = require("../lib/utilities");
+var utilities = require("../../utilities");
 var xcode = require("xcode");
 var plist = require('plist');
 
