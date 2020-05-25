@@ -1,8 +1,6 @@
 #import "FirebasePlugin.h"
 #import <Cordova/CDV.h>
 #import "AppDelegate.h"
-#import "AppDelegate+FirebasePlugin.h"
-#import <Crashlytics/Crashlytics.h>
 @import Fabric;
 @import Crashlytics;
 @import FirebaseInstanceID;
@@ -160,7 +158,7 @@ static FirebasePlugin *firebasePlugin;
     }];
 }
 
-- (void)onMessageReceived:(CDVInvokedUrlCommand *)command {
+- (void)onNotificationOpen:(CDVInvokedUrlCommand *)command {
     self.notificationCallbackId = command.callbackId;
 
     if (self.notificationStack != nil && [self.notificationStack count]) {
@@ -300,7 +298,7 @@ static FirebasePlugin *firebasePlugin;
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)sendCrash:(CDVInvokedUrlCommand *)command {
+- (void)forceCrashlytics:(CDVInvokedUrlCommand *)command {
     [[Crashlytics sharedInstance] crash];
 }
 
