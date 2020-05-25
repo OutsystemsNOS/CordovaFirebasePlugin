@@ -29,5 +29,8 @@
     "plist": "^3.0.1",
     "xcode": "^2.0.0",
     "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+     "xml-js": "^1.6.11"
   }
 }
