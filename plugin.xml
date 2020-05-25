@@ -106,7 +106,9 @@
     <header-file src="src/ios/FirebasePlugin.h" />
     <source-file src="src/ios/FirebasePlugin.m" />
 
-    <framework src="Crashlytics" type="podspec" spec="~> 3.14.0" />
+    <framework src="src/ios/Crashlytics/Crashlytics.framework" embed="true" custom="true" /> 
+
+
     <framework src="FirebaseAnalytics" type="podspec" spec="~> 6.5.1" />
     <framework src="FirebaseMessaging" type="podspec" spec="~> 2.2" />
     <framework src="FirebaseAuth" type="podspec" spec="~> 4.6.1" />
