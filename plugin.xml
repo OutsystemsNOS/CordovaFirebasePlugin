@@ -101,18 +101,37 @@
 
     <resource-file src="GoogleService-Info.plist" target="./GoogleService-Info.plist" />
 
-    <header-file src="src/ios/AppDelegate+FirebasePlugin.h" />
-    <source-file src="src/ios/AppDelegate+FirebasePlugin.m" />
-    <header-file src="src/ios/FirebasePlugin.h" />
-    <source-file src="src/ios/FirebasePlugin.m" />
 
-    <framework src="Fabric" type="podspec" spec="~> 1.9" />
-    <framework src="Crashlytics" type="podspec" spec="~> 3.12" />
-    <framework src="FirebaseAnalytics" type="podspec" spec="~> 4.2" />
-    <framework src="FirebaseMessaging" type="podspec" spec="~> 2.2" />
-    <framework src="FirebaseAuth" type="podspec" spec="~> 4.6.1" />
-    <framework src="FirebaseRemoteConfig" type="podspec" spec="~> 2.1.3" />
-    <framework src="FirebasePerformance" type="podspec" spec="~> 1.1.3" />
+		<header-file src="src/ios/AppDelegate+FirebasePlugin.h" />
+		<source-file src="src/ios/AppDelegate+FirebasePlugin.m" />
+		<header-file src="src/ios/FirebasePlugin.h" />
+		<source-file src="src/ios/FirebasePlugin.m" />
+		<header-file src="src/ios/FirebasePluginMessageReceiver.h" />
+		<source-file src="src/ios/FirebasePluginMessageReceiver.m" />
+		<header-file src="src/ios/FirebasePluginMessageReceiverManager.h" />
+		<source-file src="src/ios/FirebasePluginMessageReceiverManager.m" />
+
+		<framework src="AuthenticationServices.framework" />
+
+
+    <podspec>
+			<config>
+				<source url="https://cdn.cocoapods.org/"/>
+			</config>
+			<pods use-frameworks="true">
+				<pod name="Firebase/Core" spec="~> 6.23.0"/>
+				<pod name="Firebase/Auth" spec="~> 6.23.0"/>
+				<pod name="Firebase/Messaging" spec="~> 6.23.0"/>
+				<pod name="Firebase/Performance" spec="~> 6.23.0"/>
+				<pod name="Firebase/RemoteConfig" spec="~> 6.23.0"/>
+				<pod name="Firebase/InAppMessaging" spec="~> 6.23.0"/>
+				<pod name="Firebase/Firestore" spec="~> 6.23.0"/>
+				<pod name="Fabric" spec="~> 1.10.2"/>
+				<pod name="Crashlytics" spec="~> 3.14.0"/>
+				<pod name="GoogleSignIn" spec="~> 5.0.2"/>
+				<pod name="GoogleTagManager" spec="~> 7.1.2"/>
+			</pods>
+		</podspec>
 
 
 
