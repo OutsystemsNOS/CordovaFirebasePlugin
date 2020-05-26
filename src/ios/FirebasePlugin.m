@@ -2,7 +2,7 @@
 #import <Cordova/CDV.h>
 #import "AppDelegate.h"
 // @import Fabric;
-// @import Crashlytics;
+@import Crashlytics;
 @import FirebaseInstanceID;
 @import FirebaseMessaging;
 @import FirebaseAnalytics;
@@ -281,26 +281,26 @@ static FirebasePlugin *firebasePlugin;
 //
 // Crashlytics
 //
-// - (void)logError:(CDVInvokedUrlCommand *)command {
-//     [self.commandDelegate runInBackground:^{
-//         NSString* errorMessage = [command.arguments objectAtIndex:0];
-//         CLSNSLog(@"FirebasePlugin - %@", errorMessage);
-//         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-//         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-//     }];
-// }
+- (void)logError:(CDVInvokedUrlCommand *)command {
+    [self.commandDelegate runInBackground:^{
+        NSString* errorMessage = [command.arguments objectAtIndex:0];
+        CLSNSLog(@"FirebasePlugin - %@", errorMessage);
+        CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
 
-// - (void)setCrashlyticsUserId:(CDVInvokedUrlCommand *)command {
-//     NSString* userId = [command.arguments objectAtIndex:0];
+- (void)setCrashlyticsUserId:(CDVInvokedUrlCommand *)command {
+    NSString* userId = [command.arguments objectAtIndex:0];
 
-//     [CrashlyticsKit setUserIdentifier:userId];
-//     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-//     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-// }
+    [CrashlyticsKit setUserIdentifier:userId];
+    CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
 
-// - (void)forceCrashlytics:(CDVInvokedUrlCommand *)command {
-//     [[Crashlytics sharedInstance] crash];
-// }
+- (void)forceCrashlytics:(CDVInvokedUrlCommand *)command {
+    [[Crashlytics sharedInstance] crash];
+}
 
 //
 // Remote Config
