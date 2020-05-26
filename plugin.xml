@@ -106,8 +106,6 @@
     <header-file src="src/ios/FirebasePlugin.h" />
     <source-file src="src/ios/FirebasePlugin.m" />
 
-    <framework custom="true" src="src/ios/FirebasePerformance.framework" />
-
 
 <!--     <framework src="Fabric" type="podspec" spec="~> 1.9" /> -->
     <framework src="Crashlytics" type="podspec" spec="~> 3.14.0" />
