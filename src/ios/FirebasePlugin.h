@@ -25,11 +25,11 @@
 // - (void)activateFetched:(CDVInvokedUrlCommand *)command;
 // - (void)fetch:(CDVInvokedUrlCommand *)command;
 // - (void)getValue:(CDVInvokedUrlCommand *)command;
-// - (void)startTrace:(CDVInvokedUrlCommand *)command;
-// - (void)incrementCounter:(CDVInvokedUrlCommand *)command;
-// - (void)stopTrace:(CDVInvokedUrlCommand *)command;
+- (void)startTrace:(CDVInvokedUrlCommand *)command;
+- (void)incrementCounter:(CDVInvokedUrlCommand *)command;
+- (void)stopTrace:(CDVInvokedUrlCommand *)command;
 - (void)forceCrashlytics:(CDVInvokedUrlCommand *)command;
-// - (void)setPerformanceCollectionEnabled:(CDVInvokedUrlCommand*)command;
+- (void)setPerformanceCollectionEnabled:(CDVInvokedUrlCommand*)command;
 - (void)setAnalyticsCollectionEnabled:(CDVInvokedUrlCommand *)command;
 - (void)clearAllNotifications:(CDVInvokedUrlCommand *)command;
 @property(nonatomic, copy) NSString *notificationCallbackId;
