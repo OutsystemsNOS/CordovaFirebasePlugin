@@ -14,8 +14,10 @@
     <clobbers target="fp" />
   </js-module>
 
+  <!--  
   <hook type="before_plugin_install" src="scripts/configurations/installDependencies.js" />
   <hook type="before_plugin_install" src="scripts/configurations/unzipAndCopyConfigurations.js" />
+  --> 
 
   <preference name="APP_DOMAIN" default="/" />
   <preference name="APP_PATH" default="/" />
