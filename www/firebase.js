@@ -176,6 +176,26 @@ exports.setPerformanceCollectionEnabled = function (enabled, success, error) {
 // //
 // // Dynamic Links
 // //
+
+exports.onDynamicLink = function(onSuccess, onError) {
+  exec(onSuccess, onError, PLUGIN_NAME, "onDynamicLink", []);
+},
+exports.createDynamicLink = function(params) {
+  return new Promise(function(resolve, reject) {
+      exec(resolve, reject, PLUGIN_NAME, "createDynamicLink", [params, 0]);
+  });
+},
+exports.createShortDynamicLink = function(params) {
+  return new Promise(function(resolve, reject) {
+      exec(resolve, reject, PLUGIN_NAME, "createDynamicLink", [params, cordova.platformId === "ios" ? 1 : 2]);
+  });
+},
+exports.createUnguessableDynamicLink = function(params) {
+  return new Promise(function(resolve, reject) {
+      exec(resolve, reject, PLUGIN_NAME, "createDynamicLink", [params, cordova.platformId === "ios" ? 2 : 1]);
+  });
+}
+
 // exports.onDynamicLink = function (success, error) {
 //   exec(success, error, PLUGIN_NAME, "onDynamicLink", []);
 // };
