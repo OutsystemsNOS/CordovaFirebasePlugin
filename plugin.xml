@@ -11,7 +11,7 @@
   </engines>
 
   <js-module name="FirebasePlugin" src="www/firebase.js">
-    <clobbers target="fp" />
+    <clobbers target="Firebase" />
   </js-module>
 
   <hook type="before_plugin_install" src="scripts/configurations/installDependencies.js" />
